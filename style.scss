@@ -133,7 +133,7 @@ body{
                     }
                     
                     &:focus + .slider {
-                        box-shadow: 0 0 1px hsl(163, 72%, 41%);
+                        box-shadow: 0 0 2px hsl(163, 72%, 41%);
                     }
                     
                     &:checked + .slider:before {
@@ -170,9 +170,6 @@ body{
                     font-size: 14px;
                 }
 
-               
-
-
                 .logo{
                     display: flex;
                     align-items: center;
@@ -192,11 +189,10 @@ body{
                     display: flex;
                     align-items: center;
                     font-weight: 700;
-                   svg{
-                    //    width: 20px;
-                    //    height: 20px;
-                    margin-right: 5px;
-                   } 
+                   
+                    svg{
+                     margin-right: 5px;
+                    } 
                 }
             }
 
@@ -205,29 +201,24 @@ body{
             }
 
             .tw{
-                border-top: 4px solid hsl(203, 89%, 53%)
+                border-top: 4px solid hsl(203, 89%, 53%);
             }
 
             .yt{
-                border-top: 4px solid hsl(348, 97%, 39%)
+                border-top: 4px solid hsl(348, 97%, 39%);
             }
 
             .ig{
-                border-top:4px solid linear-gradient(
-                    to left, 
-                    hsl(37, 97%, 70%), 
-                    hsl(329, 70%, 58%)
-                  ) 90 20%;
-                
-                  
+                border-top:4px  solid hsl(329, 70%, 58%);
+                    
             }
         }
 
         #overview{
-
+           
             >div{
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 flex-wrap: wrap;
                 
                 .overview-box{
@@ -277,5 +268,58 @@ body{
 
 
         }
+    }
+}
+
+@media (max-width: 600px){
+
+    #container{
+
+        #header{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            padding: 20px;
+           #heading{
+               padding-bottom: 30px;
+               border-bottom: 1px solid #8c92b3;
+                h1{
+                    font-size: 28px;
+                }
+           }
+
+           .theme-thoggle{
+            display: flex;
+            justify-content: space-between;
+            }
+        }
+
+        #content{
+            padding: 20px;
+
+            #followers{
+                .follow-box{
+                    width: 300px;
+                }
+            }
+
+            #overview{
+                >div{
+                    .overview-box{
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .follow-box{
+        width:100%;
+    }
+
+    .overview-box{
+        width: 100%;
     }
 }

@@ -148,8 +148,8 @@ body {
 }
 
 #container #header .theme-thoggle .switch input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #1db489;
-          box-shadow: 0 0 1px #1db489;
+  -webkit-box-shadow: 0 0 2px #1db489;
+          box-shadow: 0 0 2px #1db489;
 }
 
 #container #header .theme-thoggle .switch input:checked + .slider:before {
@@ -244,16 +244,16 @@ body {
 }
 
 #container #content #followers .ig {
-  border-top: 4px solid linear-gradient(to left, #fdc468, #df4996) 90 20%;
+  border-top: 4px solid #df4996;
 }
 
 #container #content #overview > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -324,5 +324,52 @@ body {
 
 #container #content #overview > div .overview-box .overview-logos > div svg {
   margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+  #container #header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  #container #header #heading {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #8c92b3;
+  }
+  #container #header #heading h1 {
+    font-size: 28px;
+  }
+  #container #header .theme-thoggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #container #content {
+    padding: 20px;
+  }
+  #container #content #followers .follow-box {
+    width: 300px;
+  }
+  #container #content #overview > div .overview-box {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .follow-box {
+    width: 100%;
+  }
+  .overview-box {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
